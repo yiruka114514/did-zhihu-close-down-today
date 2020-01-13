@@ -25,27 +25,17 @@ Toolkit.run(
 
     let content = ''
     if (closed) {
-      content = `知乎真的倒闭了！！！
+       tools.log.debug( `知乎真的倒闭了！！！
 Zhihu.com have closed down today!!!😊
 
 ${time}
-      `
+      `)
     } else {
-      content = `知乎还没有倒闭……
+       tools.log.debug(`知乎还没有倒闭……
 Zhihu.com haven't closed down today... 😔
 
 ${time}
-      `
-    }
-
-    const box = new GistBox({ id: GIST_ID, token: GH_PAT })
-    try {
-      tools.log.debug(`Updating Gist ${GIST_ID}`)
-      await box.update({ content })
-      tools.exit.success('Gist updated!')
-    } catch (err) {
-      tools.log.debug('Error getting or update the Gist:')
-      return tools.exit.failure(err)
+      `)
     }
   },
   {
