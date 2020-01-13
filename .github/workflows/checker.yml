@@ -32,5 +32,5 @@ jobs:
           node index.js
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-          GH_USERNAME: himself65
-          GIST_ID: 45b82f824f6185b29555a6da516b7337
+          GH_USERNAME: yiruka114514
+          GIST_ID: 9972c01ad3be9001435a6cb7f9c62e21
